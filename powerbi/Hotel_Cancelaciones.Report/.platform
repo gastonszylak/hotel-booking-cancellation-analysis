@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "Report",
+    "displayName": "Hotel_Cancelaciones"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "c559b33b-cc26-4fd4-bf0a-5b46c5f85ae1"
+  }
+}

@@ -1,0 +1,202 @@
+{
+  "config": "{\"version\": \"5.43\", \"themeCollection\": {}, \"activeSectionIndex\": 0, \"defaultDrillFilterOtherVisuals\": true, \"settings\": {\"useStylableVisualContainerHeader\": true}}",
+  "layoutOptimization": 0,
+  "filters": "[]",
+  "sections": [
+    {
+      "name": "resumen",
+      "displayName": "Resumen de cancelaciones",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "ordinal": 0,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 10,
+          "z": 1000,
+          "width": 900,
+          "height": 70,
+          "config": "{\"name\": \"d2859e38511a4a2fa6be\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 10, \"z\": 1000, \"width\": 900, \"height\": 70}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"Cancelaciones de reservas hoteleras\", \"textStyle\": {\"fontWeight\": \"bold\", \"fontSize\": \"20pt\", \"color\": \"#0b0b0b\"}}]}, {\"textRuns\": [{\"value\": \"~118.500 reservas reales · llegadas jul-2015 a ago-2017 · hotel urbano y resort (Portugal)\", \"textStyle\": {\"fontSize\": \"11pt\", \"color\": \"#52514e\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1000,
+          "y": 18,
+          "z": 2000,
+          "width": 260,
+          "height": 60,
+          "config": "{\"name\": \"30bb899110634839aac2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1000, \"y\": 18, \"z\": 2000, \"width\": 260, \"height\": 60}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"bookings.hotel\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"hotel\"}, \"Name\": \"bookings.hotel\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Hotel'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 3000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"069e59b8a3e04a50b220\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 90, \"z\": 3000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.Reservas\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Reservas\"}, \"Name\": \"_Medidas.Reservas\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Reservas'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.Reservas\": {\"displayName\": \"Reservas\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 332,
+          "y": 90,
+          "z": 4000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"3a11b623d3f14de78532\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 332, \"y\": 90, \"z\": 4000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.Tasa de cancelación\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tasa de cancelación'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.Tasa de cancelación\": {\"displayName\": \"Tasa de cancelación\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 644,
+          "y": 90,
+          "z": 5000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"96e852d729224ff29f7a\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 644, \"y\": 90, \"z\": 5000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.Ingreso realizado\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Ingreso realizado\"}, \"Name\": \"_Medidas.Ingreso realizado\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ingreso realizado'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.Ingreso realizado\": {\"displayName\": \"Ingreso realizado\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 956,
+          "y": 90,
+          "z": 6000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"47cbc63cb753469cb5dd\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 956, \"y\": 90, \"z\": 6000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.Ingreso en riesgo\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Ingreso en riesgo\"}, \"Name\": \"_Medidas.Ingreso en riesgo\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ingreso en riesgo (cancelado)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.Ingreso en riesgo\": {\"displayName\": \"Ingreso en riesgo (cancelado)\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 205,
+          "z": 7000,
+          "width": 760,
+          "height": 250,
+          "config": "{\"name\": \"023bd4880e6541a6aced\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 205, \"z\": 7000, \"width\": 760, \"height\": 250}}], \"singleVisual\": {\"visualType\": \"lineChart\", \"projections\": {\"Category\": [{\"queryRef\": \"Calendario.Mes\"}], \"Y\": [{\"queryRef\": \"_Medidas.Tasa de cancelación\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"Calendario\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Mes\"}, \"Name\": \"Calendario.Mes\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Mes\"}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"dataPoint\": [{\"properties\": {\"defaultColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}], \"valueAxis\": [{\"properties\": {\"gridlineShow\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"gridlineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"lineStyles\": [{\"properties\": {\"strokeWidth\": {\"expr\": {\"Literal\": {\"Value\": \"2D\"}}}, \"showMarker\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tasa de cancelación por mes de llegada'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 465,
+          "z": 8000,
+          "width": 760,
+          "height": 240,
+          "config": "{\"name\": \"49d6d5d7fa184c66a9d2\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 465, \"z\": 8000, \"width\": 760, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"bookings.lead_time_band\"}], \"Y\": [{\"queryRef\": \"_Medidas.Tasa de cancelación\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"lead_time_band\"}, \"Name\": \"bookings.lead_time_band\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"lead_time_band\"}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"dataPoint\": [{\"properties\": {\"defaultColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}], \"valueAxis\": [{\"properties\": {\"gridlineShow\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"gridlineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tasa de cancelación según días de anticipación'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 795,
+          "y": 205,
+          "z": 9000,
+          "width": 465,
+          "height": 500,
+          "config": "{\"name\": \"94142c01a8274070ace8\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 795, \"y\": 205, \"z\": 9000, \"width\": 465, \"height\": 500}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"bookings.market_segment\"}], \"Y\": [{\"queryRef\": \"_Medidas.Ingreso en riesgo\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"market_segment\"}, \"Name\": \"bookings.market_segment\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ingreso en riesgo\"}, \"Name\": \"_Medidas.Ingreso en riesgo\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ingreso en riesgo\"}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"dataPoint\": [{\"properties\": {\"defaultColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}], \"valueAxis\": [{\"properties\": {\"gridlineShow\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"gridlineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Ingreso en riesgo por segmento de mercado'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{\"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#f5f5f3'\"}}}}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}]}}"
+    },
+    {
+      "name": "riesgo",
+      "displayName": "Riesgo de cancelación",
+      "displayOption": 1,
+      "width": 1280,
+      "height": 720,
+      "filters": "[]",
+      "ordinal": 1,
+      "visualContainers": [
+        {
+          "x": 20,
+          "y": 10,
+          "z": 1000,
+          "width": 900,
+          "height": 70,
+          "config": "{\"name\": \"e781c9087c464a958a93\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 10, \"z\": 1000, \"width\": 900, \"height\": 70}}], \"singleVisual\": {\"visualType\": \"textbox\", \"drillFilterOtherVisuals\": true, \"objects\": {\"general\": [{\"properties\": {\"paragraphs\": [{\"textRuns\": [{\"value\": \"¿Qué reservas hay que vigilar?\", \"textStyle\": {\"fontWeight\": \"bold\", \"fontSize\": \"20pt\", \"color\": \"#0b0b0b\"}}]}, {\"textRuns\": [{\"value\": \"Puntaje de riesgo calculado con datos conocidos al momento de reservar\", \"textStyle\": {\"fontSize\": \"11pt\", \"color\": \"#52514e\"}}]}]}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 1000,
+          "y": 18,
+          "z": 2000,
+          "width": 260,
+          "height": 60,
+          "config": "{\"name\": \"a0f06e68f8a54961821e\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 1000, \"y\": 18, \"z\": 2000, \"width\": 260, \"height\": 60}}], \"singleVisual\": {\"visualType\": \"slicer\", \"projections\": {\"Values\": [{\"queryRef\": \"bookings.hotel\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"hotel\"}, \"Name\": \"bookings.hotel\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"data\": [{\"properties\": {\"mode\": {\"expr\": {\"Literal\": {\"Value\": \"'Dropdown'\"}}}}}], \"header\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Hotel'\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 90,
+          "z": 3000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"d5edcdee93c146539c00\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 90, \"z\": 3000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.% Reservas riesgo alto\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"% Reservas riesgo alto\"}, \"Name\": \"_Medidas.% Reservas riesgo alto\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'% Reservas de riesgo alto'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.% Reservas riesgo alto\": {\"displayName\": \"% Reservas de riesgo alto\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 332,
+          "y": 90,
+          "z": 4000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"3943625c22d243e1bda8\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 332, \"y\": 90, \"z\": 4000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.Anticipación promedio (días)\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Anticipación promedio (días)\"}, \"Name\": \"_Medidas.Anticipación promedio (días)\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Anticipación promedio (días)'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.Anticipación promedio (días)\": {\"displayName\": \"Anticipación promedio (días)\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 644,
+          "y": 90,
+          "z": 5000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"4582e164530c473aaa9e\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 644, \"y\": 90, \"z\": 5000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.Tarifa diaria promedio\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"Tarifa diaria promedio\"}, \"Name\": \"_Medidas.Tarifa diaria promedio\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tarifa diaria promedio'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.Tarifa diaria promedio\": {\"displayName\": \"Tarifa diaria promedio\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 956,
+          "y": 90,
+          "z": 6000,
+          "width": 300,
+          "height": 100,
+          "config": "{\"name\": \"a80a126bb97b46f79ad5\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 956, \"y\": 90, \"z\": 6000, \"width\": 300, \"height\": 100}}], \"singleVisual\": {\"visualType\": \"card\", \"projections\": {\"Values\": [{\"queryRef\": \"_Medidas.% Ingreso en riesgo\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"% Ingreso en riesgo\"}, \"Name\": \"_Medidas.% Ingreso en riesgo\"}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"labels\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"22D\"}}}}}], \"categoryLabels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'% Ingreso en riesgo'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}, \"columnProperties\": {\"_Medidas.% Ingreso en riesgo\": {\"displayName\": \"% Ingreso en riesgo\"}}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 205,
+          "z": 7000,
+          "width": 400,
+          "height": 250,
+          "config": "{\"name\": \"6eeb1b6c2fdf4a75a1c1\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 205, \"z\": 7000, \"width\": 400, \"height\": 250}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"bookings.risk_level\"}], \"Y\": [{\"queryRef\": \"_Medidas.Tasa de cancelación\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"risk_level\"}, \"Name\": \"bookings.risk_level\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"risk_level\"}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"dataPoint\": [{\"properties\": {\"defaultColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#eb6834'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}], \"valueAxis\": [{\"properties\": {\"gridlineShow\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"gridlineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tasa de cancelación por nivel de riesgo'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 435,
+          "y": 205,
+          "z": 8000,
+          "width": 400,
+          "height": 250,
+          "config": "{\"name\": \"cfbc22366f3f42bfaffc\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 435, \"y\": 205, \"z\": 8000, \"width\": 400, \"height\": 250}}], \"singleVisual\": {\"visualType\": \"clusteredColumnChart\", \"projections\": {\"Category\": [{\"queryRef\": \"bookings.special_requests_band\"}], \"Y\": [{\"queryRef\": \"_Medidas.Tasa de cancelación\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"special_requests_band\"}, \"Name\": \"bookings.special_requests_band\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}], \"OrderBy\": [{\"Direction\": 1, \"Expression\": {\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"special_requests_band\"}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"dataPoint\": [{\"properties\": {\"defaultColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}], \"valueAxis\": [{\"properties\": {\"gridlineShow\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"gridlineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tasa de cancelación según pedidos especiales'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 850,
+          "y": 205,
+          "z": 9000,
+          "width": 410,
+          "height": 250,
+          "config": "{\"name\": \"e904ee032c0143e0858b\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 850, \"y\": 205, \"z\": 9000, \"width\": 410, \"height\": 250}}], \"singleVisual\": {\"visualType\": \"clusteredBarChart\", \"projections\": {\"Category\": [{\"queryRef\": \"bookings.distribution_channel\"}], \"Y\": [{\"queryRef\": \"_Medidas.Tasa de cancelación\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"distribution_channel\"}, \"Name\": \"bookings.distribution_channel\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}}}]}, \"drillFilterOtherVisuals\": true, \"objects\": {\"dataPoint\": [{\"properties\": {\"defaultColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#2a78d6'\"}}}}}}}], \"labels\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#52514e'\"}}}}}}}], \"valueAxis\": [{\"properties\": {\"gridlineShow\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"gridlineColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}], \"categoryAxis\": [{\"properties\": {\"showAxisTitle\": {\"expr\": {\"Literal\": {\"Value\": \"false\"}}}}}]}, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Tasa de cancelación por canal'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        },
+        {
+          "x": 20,
+          "y": 465,
+          "z": 10000,
+          "width": 1240,
+          "height": 240,
+          "config": "{\"name\": \"b27909a8bea343afa4ea\", \"layouts\": [{\"id\": 0, \"position\": {\"x\": 20, \"y\": 465, \"z\": 10000, \"width\": 1240, \"height\": 240}}], \"singleVisual\": {\"visualType\": \"tableEx\", \"projections\": {\"Values\": [{\"queryRef\": \"bookings.country\"}, {\"queryRef\": \"_Medidas.Reservas\"}, {\"queryRef\": \"_Medidas.Tasa de cancelación\"}, {\"queryRef\": \"_Medidas.Ingreso en riesgo\"}, {\"queryRef\": \"_Medidas.Tarifa diaria promedio\"}]}, \"prototypeQuery\": {\"Version\": 2, \"From\": [{\"Name\": \"t0\", \"Entity\": \"bookings\", \"Type\": 0}, {\"Name\": \"t1\", \"Entity\": \"_Medidas\", \"Type\": 0}], \"Select\": [{\"Column\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t0\"}}, \"Property\": \"country\"}, \"Name\": \"bookings.country\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Reservas\"}, \"Name\": \"_Medidas.Reservas\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tasa de cancelación\"}, \"Name\": \"_Medidas.Tasa de cancelación\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ingreso en riesgo\"}, \"Name\": \"_Medidas.Ingreso en riesgo\"}, {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Tarifa diaria promedio\"}, \"Name\": \"_Medidas.Tarifa diaria promedio\"}], \"OrderBy\": [{\"Direction\": 2, \"Expression\": {\"Measure\": {\"Expression\": {\"SourceRef\": {\"Source\": \"t1\"}}, \"Property\": \"Ingreso en riesgo\"}}}]}, \"drillFilterOtherVisuals\": true, \"vcObjects\": {\"title\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"text\": {\"expr\": {\"Literal\": {\"Value\": \"'Países con mayor ingreso en riesgo'\"}}}, \"fontSize\": {\"expr\": {\"Literal\": {\"Value\": \"11D\"}}}, \"fontColor\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#0b0b0b'\"}}}}}}}], \"background\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#ffffff'\"}}}}}}}], \"border\": [{\"properties\": {\"show\": {\"expr\": {\"Literal\": {\"Value\": \"true\"}}}, \"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#e6e5e1'\"}}}}}, \"radius\": {\"expr\": {\"Literal\": {\"Value\": \"8D\"}}}}}]}}}",
+          "filters": "[]"
+        }
+      ],
+      "config": "{\"objects\": {\"background\": [{\"properties\": {\"color\": {\"solid\": {\"color\": {\"expr\": {\"Literal\": {\"Value\": \"'#f5f5f3'\"}}}}}, \"transparency\": {\"expr\": {\"Literal\": {\"Value\": \"0D\"}}}}}]}}"
+    }
+  ]
+}

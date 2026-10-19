@@ -1,0 +1,11 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/fabric/gitIntegration/platformProperties/2.0.0/schema.json",
+  "metadata": {
+    "type": "SemanticModel",
+    "displayName": "Hotel_Cancelaciones"
+  },
+  "config": {
+    "version": "2.0",
+    "logicalId": "281028bc-429f-4df6-aa58-2f408c8bda8e"
+  }
+}

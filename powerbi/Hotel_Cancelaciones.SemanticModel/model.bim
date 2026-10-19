@@ -1,0 +1,367 @@
+{
+  "compatibilityLevel": 1567,
+  "model": {
+    "culture": "es-AR",
+    "defaultPowerBIDataSourceVersion": "powerBI_V3",
+    "sourceQueryCulture": "es-AR",
+    "dataAccessOptions": {
+      "legacyRedirects": true,
+      "returnErrorValuesAsNull": true
+    },
+    "tables": [
+      {
+        "name": "bookings",
+        "columns": [
+          {
+            "name": "hotel",
+            "dataType": "string",
+            "sourceColumn": "hotel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_canceled",
+            "dataType": "int64",
+            "sourceColumn": "is_canceled",
+            "summarizeBy": "sum",
+            "isHidden": true
+          },
+          {
+            "name": "arrival_date",
+            "dataType": "dateTime",
+            "sourceColumn": "arrival_date",
+            "summarizeBy": "none",
+            "formatString": "dd/mm/yyyy"
+          },
+          {
+            "name": "arrival_date_year",
+            "dataType": "int64",
+            "sourceColumn": "arrival_date_year",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "arrival_month",
+            "dataType": "string",
+            "sourceColumn": "arrival_month",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "lead_time",
+            "dataType": "int64",
+            "sourceColumn": "lead_time",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "lead_time_band",
+            "dataType": "string",
+            "sourceColumn": "lead_time_band",
+            "summarizeBy": "none",
+            "sortByColumn": "lead_time_band_order"
+          },
+          {
+            "name": "lead_time_band_order",
+            "dataType": "int64",
+            "sourceColumn": "lead_time_band_order",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "nights",
+            "dataType": "int64",
+            "sourceColumn": "nights",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "guests",
+            "dataType": "int64",
+            "sourceColumn": "guests",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "country",
+            "dataType": "string",
+            "sourceColumn": "country",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "market_segment",
+            "dataType": "string",
+            "sourceColumn": "market_segment",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "distribution_channel",
+            "dataType": "string",
+            "sourceColumn": "distribution_channel",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "customer_type",
+            "dataType": "string",
+            "sourceColumn": "customer_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "deposit_type",
+            "dataType": "string",
+            "sourceColumn": "deposit_type",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "is_repeated_guest",
+            "dataType": "int64",
+            "sourceColumn": "is_repeated_guest",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "had_previous_cancel",
+            "dataType": "int64",
+            "sourceColumn": "had_previous_cancel",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "total_of_special_requests",
+            "dataType": "int64",
+            "sourceColumn": "total_of_special_requests",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "special_requests_band",
+            "dataType": "string",
+            "sourceColumn": "special_requests_band",
+            "summarizeBy": "none",
+            "sortByColumn": "special_requests_order"
+          },
+          {
+            "name": "special_requests_order",
+            "dataType": "int64",
+            "sourceColumn": "special_requests_order",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "adr",
+            "dataType": "double",
+            "sourceColumn": "adr",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "revenue",
+            "dataType": "double",
+            "sourceColumn": "revenue",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "risk_score",
+            "dataType": "int64",
+            "sourceColumn": "risk_score",
+            "summarizeBy": "sum"
+          },
+          {
+            "name": "risk_level",
+            "dataType": "string",
+            "sourceColumn": "risk_level",
+            "summarizeBy": "none",
+            "sortByColumn": "risk_level_order"
+          },
+          {
+            "name": "risk_level_order",
+            "dataType": "int64",
+            "sourceColumn": "risk_level_order",
+            "summarizeBy": "none",
+            "isHidden": true
+          }
+        ],
+        "measures": [],
+        "partitions": [
+          {
+            "name": "bookings",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = Csv.Document(File.Contents(CarpetaDatos & \"pbi_bookings.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
+                "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
+                "    SinVacios = Table.ReplaceValue(Encabezados, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Encabezados)),",
+                "    Tipos = Table.TransformColumnTypes(SinVacios, {{\"hotel\", type text}, {\"is_canceled\", Int64.Type}, {\"arrival_date\", type date}, {\"arrival_date_year\", Int64.Type}, {\"arrival_month\", type text}, {\"lead_time\", Int64.Type}, {\"lead_time_band\", type text}, {\"lead_time_band_order\", Int64.Type}, {\"nights\", Int64.Type}, {\"guests\", Int64.Type}, {\"country\", type text}, {\"market_segment\", type text}, {\"distribution_channel\", type text}, {\"customer_type\", type text}, {\"deposit_type\", type text}, {\"is_repeated_guest\", Int64.Type}, {\"had_previous_cancel\", Int64.Type}, {\"total_of_special_requests\", Int64.Type}, {\"special_requests_band\", type text}, {\"special_requests_order\", Int64.Type}, {\"adr\", type number}, {\"revenue\", type number}, {\"risk_score\", Int64.Type}, {\"risk_level\", type text}, {\"risk_level_order\", Int64.Type}}, \"en-US\")",
+                "in",
+                "    Tipos"
+              ]
+            }
+          }
+        ]
+      },
+      {
+        "name": "Calendario",
+        "dataCategory": "Time",
+        "columns": [
+          {
+            "name": "Fecha",
+            "dataType": "dateTime",
+            "isNameInferred": true,
+            "sourceColumn": "[Fecha]",
+            "type": "calculatedTableColumn",
+            "summarizeBy": "none",
+            "isKey": true,
+            "formatString": "dd/mm/yyyy"
+          },
+          {
+            "name": "Año",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "sourceColumn": "[Año]",
+            "type": "calculatedTableColumn",
+            "summarizeBy": "none"
+          },
+          {
+            "name": "MesNum",
+            "dataType": "int64",
+            "isNameInferred": true,
+            "sourceColumn": "[MesNum]",
+            "type": "calculatedTableColumn",
+            "summarizeBy": "none",
+            "isHidden": true
+          },
+          {
+            "name": "Mes",
+            "dataType": "string",
+            "isNameInferred": true,
+            "sourceColumn": "[Mes]",
+            "type": "calculatedTableColumn",
+            "summarizeBy": "none"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "Calendario",
+            "mode": "import",
+            "source": {
+              "type": "calculated",
+              "expression": "VAR Base = CALENDAR(DATE(2015,7,1), DATE(2017,8,31))\nRETURN SELECTCOLUMNS(Base, \"Fecha\", [Date], \"Año\", YEAR([Date]), \"MesNum\", MONTH([Date]), \"Mes\", YEAR([Date]) & \"-\" & FORMAT(MONTH([Date]), \"00\"))"
+            }
+          }
+        ]
+      },
+      {
+        "name": "_Medidas",
+        "columns": [
+          {
+            "name": "Columna",
+            "dataType": "string",
+            "sourceColumn": "Columna",
+            "isHidden": true
+          }
+        ],
+        "measures": [
+          {
+            "name": "Reservas",
+            "expression": "COUNTROWS(bookings)",
+            "formatString": "#,0",
+            "displayFolder": "Reservas"
+          },
+          {
+            "name": "Reservas canceladas",
+            "expression": "CALCULATE(COUNTROWS(bookings), bookings[is_canceled] = 1)",
+            "formatString": "#,0",
+            "displayFolder": "Reservas"
+          },
+          {
+            "name": "Tasa de cancelación",
+            "expression": "DIVIDE([Reservas canceladas], [Reservas])",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "displayFolder": "Reservas"
+          },
+          {
+            "name": "Ingreso realizado",
+            "expression": "CALCULATE(SUM(bookings[revenue]), bookings[is_canceled] = 0)",
+            "formatString": "\"€ \"#,0",
+            "displayFolder": "Ingresos",
+            "description": "Tarifa diaria x noches de las reservas no canceladas"
+          },
+          {
+            "name": "Ingreso en riesgo",
+            "expression": "CALCULATE(SUM(bookings[revenue]), bookings[is_canceled] = 1)",
+            "formatString": "\"€ \"#,0",
+            "displayFolder": "Ingresos",
+            "description": "Valor de las reservas canceladas (bruto: parte de esas noches se revende)"
+          },
+          {
+            "name": "% Ingreso en riesgo",
+            "expression": "DIVIDE([Ingreso en riesgo], [Ingreso realizado] + [Ingreso en riesgo])",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "displayFolder": "Ingresos"
+          },
+          {
+            "name": "Tarifa diaria promedio",
+            "expression": "CALCULATE(AVERAGE(bookings[adr]), bookings[is_canceled] = 0)",
+            "formatString": "\"€ \"#,0.0",
+            "displayFolder": "Ingresos"
+          },
+          {
+            "name": "Anticipación promedio (días)",
+            "expression": "AVERAGE(bookings[lead_time])",
+            "formatString": "0",
+            "displayFolder": "Reservas"
+          },
+          {
+            "name": "Reservas riesgo alto",
+            "expression": "CALCULATE([Reservas], bookings[risk_level] = \"Alto\")",
+            "formatString": "#,0",
+            "displayFolder": "Riesgo"
+          },
+          {
+            "name": "% Reservas riesgo alto",
+            "expression": "DIVIDE([Reservas riesgo alto], [Reservas])",
+            "formatString": "0.0%;-0.0%;0.0%",
+            "displayFolder": "Riesgo"
+          }
+        ],
+        "partitions": [
+          {
+            "name": "_Medidas",
+            "mode": "import",
+            "source": {
+              "type": "m",
+              "expression": [
+                "let",
+                "    Origen = #table(type table [Columna = text], {})",
+                "in",
+                "    Origen"
+              ]
+            }
+          }
+        ]
+      }
+    ],
+    "relationships": [
+      {
+        "name": "9203e431-7782-40f3-9e65-8766305177b0",
+        "fromTable": "bookings",
+        "fromColumn": "arrival_date",
+        "toTable": "Calendario",
+        "toColumn": "Fecha"
+      }
+    ],
+    "expressions": [
+      {
+        "name": "CarpetaDatos",
+        "kind": "m",
+        "expression": "\"C:\\Users\\usuario\\Documents\\Portfolio\\hotel-booking-cancellation-analysis\\data\\powerbi\\\" meta [IsParameterQuery=true, Type=\"Text\", IsParameterQueryRequired=true]"
+      }
+    ],
+    "annotations": [
+      {
+        "name": "PBI_QueryOrder",
+        "value": "[\"CarpetaDatos\", \"bookings\", \"_Medidas\"]"
+      },
+      {
+        "name": "__PBI_TimeIntelligenceEnabled",
+        "value": "0"
+      },
+      {
+        "name": "PBIDesktopVersion",
+        "value": "2.140.0.0"
+      }
+    ]
+  }
+}
