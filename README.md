@@ -43,9 +43,13 @@ Una reserva de riesgo alto cancela **4,2 veces más** que una de riesgo bajo. So
 
 ## Tablero en Power BI
 
-Dos páginas: **Resumen de cancelaciones** (reservas, tasa de cancelación, ingreso realizado y en riesgo, evolución mensual, anticipación, segmentos) y **Riesgo de cancelación** (niveles de riesgo, señales de compromiso, canales y países). Se puede filtrar por hotel.
+Dos páginas: **Resumen de cancelaciones** (reservas, tasa de cancelación, ingreso realizado y en riesgo, evolución mensual, anticipación, segmentos) y **Riesgo de cancelación** (niveles de riesgo, pedidos especiales, tipo de cliente, historial del huésped y países). Se puede filtrar por hotel.
 
-> 📁 `powerbi/` · ver [cómo abrirlo](#cómo-reproducirlo)
+![Tablero Power BI - Resumen de cancelaciones](reports/figures/dashboard_resumen.png)
+
+![Tablero Power BI - Riesgo de cancelación](reports/figures/dashboard_riesgo.png)
+
+📥 **[Descargar el tablero (.pbix)](powerbi/Hotel_Cancelaciones.pbix)**: se abre con Power BI Desktop y ya incluye los datos.
 
 **Modelo:** `bookings` (hechos, 1 fila por reserva) · `Calendario` (tabla de fechas en DAX) · `_Medidas` (tabla de medidas).
 
@@ -110,7 +114,7 @@ Decisiones principales (detalle en [`reports/calidad_de_datos.md`](reports/calid
 ```
 ├── data/powerbi/         CSV que consume el tablero
 ├── notebooks/            Análisis exploratorio con conclusiones
-├── powerbi/              Proyecto Power BI (.pbip): modelo, medidas DAX y reporte
+├── powerbi/              Tablero (.pbix) y proyecto Power BI (.pbip): modelo, medidas DAX y reporte
 ├── reports/              Calidad de datos, resultados SQL y gráficos
 ├── sql/analysis.sql      Consultas de negocio
 └── src/
@@ -130,7 +134,7 @@ python src/export_powerbi.py
 jupyter notebook notebooks/analisis_exploratorio.ipynb
 ```
 
-**Power BI:** abrir `powerbi/Hotel_Cancelaciones.pbip` con Power BI Desktop. Si la carpeta del proyecto está en otra ruta, actualizar el parámetro `CarpetaDatos` (Transformar datos → Administrar parámetros) para que apunte a `data/powerbi/` y luego **Actualizar**.
+**Power BI:** `powerbi/Hotel_Cancelaciones.pbix` se abre directo con los datos incluidos. Para editar el proyecto en formato texto (control de versiones), abrir `powerbi/Hotel_Cancelaciones.pbip` con Power BI Desktop. Si la carpeta del proyecto está en otra ruta, actualizar el parámetro `CarpetaDatos` (Transformar datos → Administrar parámetros) para que apunte a `data/powerbi/` y luego **Actualizar**.
 
 ---
 
