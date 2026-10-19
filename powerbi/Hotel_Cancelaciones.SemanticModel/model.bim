@@ -119,6 +119,12 @@
             "summarizeBy": "sum"
           },
           {
+            "name": "previous_cancel_label",
+            "dataType": "string",
+            "sourceColumn": "previous_cancel_label",
+            "summarizeBy": "none"
+          },
+          {
             "name": "total_of_special_requests",
             "dataType": "int64",
             "sourceColumn": "total_of_special_requests",
@@ -183,7 +189,7 @@
                 "    Origen = Csv.Document(File.Contents(CarpetaDatos & \"pbi_bookings.csv\"), [Delimiter=\",\", Encoding=65001, QuoteStyle=QuoteStyle.Csv]),",
                 "    Encabezados = Table.PromoteHeaders(Origen, [PromoteAllScalars=true]),",
                 "    SinVacios = Table.ReplaceValue(Encabezados, \"\", null, Replacer.ReplaceValue, Table.ColumnNames(Encabezados)),",
-                "    Tipos = Table.TransformColumnTypes(SinVacios, {{\"hotel\", type text}, {\"is_canceled\", Int64.Type}, {\"arrival_date\", type date}, {\"arrival_date_year\", Int64.Type}, {\"arrival_month\", type text}, {\"lead_time\", Int64.Type}, {\"lead_time_band\", type text}, {\"lead_time_band_order\", Int64.Type}, {\"nights\", Int64.Type}, {\"guests\", Int64.Type}, {\"country\", type text}, {\"market_segment\", type text}, {\"distribution_channel\", type text}, {\"customer_type\", type text}, {\"deposit_type\", type text}, {\"is_repeated_guest\", Int64.Type}, {\"had_previous_cancel\", Int64.Type}, {\"total_of_special_requests\", Int64.Type}, {\"special_requests_band\", type text}, {\"special_requests_order\", Int64.Type}, {\"adr\", type number}, {\"revenue\", type number}, {\"risk_score\", Int64.Type}, {\"risk_level\", type text}, {\"risk_level_order\", Int64.Type}}, \"en-US\")",
+                "    Tipos = Table.TransformColumnTypes(SinVacios, {{\"hotel\", type text}, {\"is_canceled\", Int64.Type}, {\"arrival_date\", type date}, {\"arrival_date_year\", Int64.Type}, {\"arrival_month\", type text}, {\"lead_time\", Int64.Type}, {\"lead_time_band\", type text}, {\"lead_time_band_order\", Int64.Type}, {\"nights\", Int64.Type}, {\"guests\", Int64.Type}, {\"country\", type text}, {\"market_segment\", type text}, {\"distribution_channel\", type text}, {\"customer_type\", type text}, {\"deposit_type\", type text}, {\"is_repeated_guest\", Int64.Type}, {\"had_previous_cancel\", Int64.Type}, {\"previous_cancel_label\", type text}, {\"total_of_special_requests\", Int64.Type}, {\"special_requests_band\", type text}, {\"special_requests_order\", Int64.Type}, {\"adr\", type number}, {\"revenue\", type number}, {\"risk_score\", Int64.Type}, {\"risk_level\", type text}, {\"risk_level_order\", Int64.Type}}, \"en-US\")",
                 "in",
                 "    Tipos"
               ]
@@ -335,7 +341,7 @@
     ],
     "relationships": [
       {
-        "name": "114ac61b-1d3b-4683-97cd-9208e618c9b3",
+        "name": "a1e0167a-68be-4a5d-95c0-214778162b3b",
         "fromTable": "bookings",
         "fromColumn": "arrival_date",
         "toTable": "Calendario",

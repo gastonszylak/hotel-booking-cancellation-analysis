@@ -20,11 +20,12 @@ def main() -> None:
     h["lead_time_band_order"] = h.lead_time_band.map({b: i for i, b in enumerate(LEAD)})
     h["risk_level_order"] = h.risk_level.map({"Bajo": 0, "Medio": 1, "Alto": 2})
     h["special_requests_order"] = h.special_requests_band.map({"Sin pedidos": 0, "1 pedido": 1, "2 o más": 2})
+    h["previous_cancel_label"] = h.had_previous_cancel.map({True: "Canceló antes", False: "Nunca canceló"})
     for c in ["had_previous_cancel", "has_agent"]:
         h[c] = h[c].astype(int)
     cols = ["hotel", "is_canceled", "arrival_date", "arrival_date_year", "arrival_month", "lead_time",
             "lead_time_band", "lead_time_band_order", "nights", "guests", "country", "market_segment",
-            "distribution_channel", "customer_type", "deposit_type", "is_repeated_guest", "had_previous_cancel",
+            "distribution_channel", "customer_type", "deposit_type", "is_repeated_guest", "had_previous_cancel", "previous_cancel_label",
             "total_of_special_requests", "special_requests_band", "special_requests_order", "adr", "revenue",
             "risk_score", "risk_level", "risk_level_order"]
     h[cols].to_csv(OUT / "pbi_bookings.csv", index=False)
